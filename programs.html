@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs & Pricing | IRON FORGE</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Oswald:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .pricing-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .pricing-card {
+            background-color: var(--color-bg-darker);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            text-align: center;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card:hover {
+            border-color: var(--color-primary);
+            transform: translateY(-10px);
+        }
+
+        .pricing-card.featured {
+            background-color: rgba(74, 69, 55, 0.2);
+            border-color: var(--color-primary);
+        }
+
+        .price {
+            font-size: 3rem;
+            color: var(--color-white);
+            font-family: var(--font-heading);
+            margin: 20px 0;
+        }
+
+        .price span {
+            font-size: 1rem;
+            color: var(--color-text-muted);
+        }
+
+        .features-list {
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+
+        .features-list li {
+            margin-bottom: 15px;
+            color: var(--color-text-main);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">IRON<span>FORGE</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Brand</a></li>
+                    <li><a href="home-2.html">Programs</a></li>
+                    <li><a href="about.html">Trainer</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="programs.html" class="active">Pricing</a></li>
+                    <li><a href="transformations.html">Results</a></li>
+                    <li><a href="dashboard.html" class="btn btn-primary"
+                            style="padding: 8px 15px; font-size: 0.9rem;">Member Login</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section style="margin-top: 80px; text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 3.5rem;">Invest In Yourself</h1>
+            <p style="color: var(--color-text-muted);">Choose the level of commitment that matches your ambition.</p>
+
+            <div class="pricing-section">
+                <!-- Plan 1 -->
+                <div class="pricing-card">
+                    <h3>Self-Guided</h3>
+                    <div class="price">$49<span>/month</span></div>
+                    <ul class="features-list">
+                        <li>Access to Iron Forge App</li>
+                        <li>Standard Workout Library</li>
+                        <li>Progress Tracking Tools</li>
+                        <li>Community Forum Access</li>
+                    </ul>
+                    <a href="signup.html" class="btn btn-outline">Join Now</a>
+                </div>
+
+                <!-- Plan 2 -->
+                <div class="pricing-card featured">
+                    <div
+                        style="background: var(--color-primary); color: white; display: inline-block; padding: 5px 15px; border-radius: 20px; margin-bottom: 15px; font-size: 0.8rem; font-weight: 700; align-self: center;">
+                        MOST POPULAR</div>
+                    <h3>Hybrid Coaching</h3>
+                    <div class="price">$149<span>/month</span></div>
+                    <ul class="features-list">
+                        <li>Everything in Self-Guided</li>
+                        <li>Custom Workout Programming</li>
+                        <li>Monthly Video Check-in</li>
+                        <li>Macronutrient Guidance</li>
+                    </ul>
+                    <a href="signup.html" class="btn btn-primary">Start Training</a>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="pricing-card">
+                    <h3>Elite 1-on-1</h3>
+                    <div class="price">$399<span>/month</span></div>
+                    <ul class="features-list">
+                        <li>Fully Customized Protocols</li>
+                        <li>Weekly Zoom Calls</li>
+                        <li>Daily Form Feedback</li>
+                        <li>Priority Chat Support</li>
+                        <li>Grocery Lists & Meal Plans</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+        <div class="container" style="max-width: 800px;">
+            <div class="section-title">
+                <h2>Common Questions</h2>
+            </div>
+
+            <div class="faq-item"
+                style="margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 20px;">
+                <h4 style="cursor: pointer; margin-bottom: 10px;">Do I need a gym membership?</h4>
+                <p style="color: var(--color-text-muted);">For the core programs, yes. However, we offer "Home Gym"
+                    variants for all tiers that require minimal equipment (dumbbells/bands).</p>
+            </div>
+
+            <div class="faq-item"
+                style="margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 20px;">
+                <h4 style="cursor: pointer; margin-bottom: 10px;">Can I cancel anytime?</h4>
+                <p style="color: var(--color-text-muted);">Yes. We operate on a month-to-month basis. No long-term
+                    contracts unless you sign up for a 6-month transformation package.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4 style="cursor: pointer; margin-bottom: 10px;">Is nutrition included?</h4>
+                <p style="color: var(--color-text-muted);">Guidance is included in Hybrid. Full meal planning is
+                    reserved for the Elite tier.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container" style="text-align: center; color: var(--color-text-muted);">
+            &copy; 2026 Iron Forge Training.
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

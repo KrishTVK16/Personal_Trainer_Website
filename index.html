@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRON FORGE | Personal Training</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.png" alt="IRONFORGE" height="40">
+            </a>
+
+            <div class="d-flex align-items-center gap-3 order-lg-3">
+                <!-- Theme Toggle -->
+                <button class="btn btn-sm btn-outline-secondary rounded-circle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <!-- Auth Buttons (Desktop) -->
+                <div class="d-none d-lg-flex gap-2">
+                    <a href="dashboard.html" class="btn btn-outline-primary btn-sm">Dashboard</a>
+                    <a href="login.html" class="btn btn-primary btn-sm">Login</a>
+                    <a href="register.html" class="btn btn-primary btn-sm">Sign Up</a>
+                </div>
+
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <!-- Offcanvas Menu -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">IRON<span>FORGE</span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Programs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <!-- Mobile Auth Buttons -->
+                    <div class="d-lg-none mt-3 d-flex gap-2 flex-wrap">
+                        <a href="dashboard.html" class="btn btn-outline-primary w-100">Dashboard</a>
+                        <a href="login.html" class="btn btn-primary w-50">Login</a>
+                        <a href="register.html" class="btn btn-primary w-50">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="d-flex align-items-center justify-content-center text-center text-white position-relative"
+        style="height: 100vh; margin-top: -76px; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover;">
+        <div class="container position-relative z-1">
+            <h1 class="display-1 fw-bold mb-4">FORGE YOUR LEGACY</h1>
+            <p class="lead mb-5 mx-auto" style="max-width: 800px;">Elite personal training for those who demand
+                excellence. Transform your body, discipline your mind.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="contact.html" class="btn btn-primary btn-lg px-5">Book Free Consult</a>
+                <a href="home-2.html" class="btn btn-outline-light btn-lg px-5">View Programs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="display-4 fw-bold">Why Train With Us?</h2>
+                    <p class="text-secondary">It's not just about lifting weights. It's about engineering a machine.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 bg-body-tertiary p-4 hover-card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-bolt fa-3x text-primary-custom mb-3"></i>
+                            <h3 class="h4">Performance First</h3>
+                            <p class="card-text text-secondary">Training designed to make you faster, stronger, and more
+                                resilient in daily life.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 bg-body-tertiary p-4 hover-card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-brain fa-3x text-primary-custom mb-3"></i>
+                            <h3 class="h4">Mindset Mastery</h3>
+                            <p class="card-text text-secondary">Discipline in the gym translates to power in business
+                                and life.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 bg-body-tertiary p-4 hover-card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-utensils fa-3x text-primary-custom mb-3"></i>
+                            <h3 class="h4">Precision Nutrition</h3>
+                            <p class="card-text text-secondary">Fuel your engine with data-driven meal plans, not
+                                guesswork.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transformation Preview -->
+    <section class="section-padding bg-body-tertiary">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="display-4 fw-bold">Real Results</h2>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="card border-0 text-white">
+                        <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                            class="card-img" alt="Result">
+                        <div class="card-img-overlay d-flex align-items-end"
+                            style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+                            <div>
+                                <h5 class="card-title">David T.</h5>
+                                <p class="card-text small">Lost 22lbs in 12 weeks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 text-white">
+                        <img src="https://images.unsplash.com/photo-1574680096141-1cddd32e0340?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                            class="card-img" alt="Result">
+                        <div class="card-img-overlay d-flex align-items-end"
+                            style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+                            <div>
+                                <h5 class="card-title">Sarah J.</h5>
+                                <p class="card-text small">Strength +15%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="pricing.html" class="btn btn-outline-primary">Start Your Journey</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-body-tertiary">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Column 1: Brand -->
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="mb-3">IRON<span>FORGE</span></h4>
+                    <p class="text-secondary small mb-4">Elite Personal Training Systems designed for those who refuse
+                        to settle for average.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i
+                                class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Company -->
+                <div class="col-lg-2 col-md-3">
+                    <h5 class="mb-3">Company</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html" class="text-decoration-none text-secondary">About Us</a>
+                        </li>
+                        <li class="mb-2"><a href="services.html"
+                                class="text-decoration-none text-secondary">Services</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-decoration-none text-secondary">Blog</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-decoration-none text-secondary">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Support -->
+                <div class="col-lg-2 col-md-3">
+                    <h5 class="mb-3">Support</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">FAQ</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Terms of Service</a>
+                        </li>
+                        <li class="mb-2"><a href="login.html" class="text-decoration-none text-secondary">Login</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div class="col-lg-4 col-md-12">
+                    <h5 class="mb-3">Newsletter</h5>
+                    <p class="small text-secondary mb-3">Subscribe for workout tips and exclusive offers.</p>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row mt-5 pt-4 border-top">
+                <div class="col-12 text-center text-secondary small">
+                    &copy; 2026 Iron Forge Training. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <div id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

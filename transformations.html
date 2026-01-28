@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformations | IRON FORGE</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Oswald:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .result-card {
+            background-color: var(--color-bg-darker);
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .images-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .ba-image {
+            flex: 1;
+            height: 250px;
+            background-color: #333;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .ba-label {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 2px 8px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .stat-box {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .stat-value {
+            color: var(--color-primary);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--color-text-muted);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">IRON<span>FORGE</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Brand</a></li>
+                    <li><a href="home-2.html">Programs</a></li>
+                    <li><a href="about.html">Trainer</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="transformations.html" class="active">Results</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="dashboard.html" class="btn btn-primary"
+                            style="padding: 8px 15px; font-size: 0.9rem;">Member Login</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section style="margin-top: 80px; text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 3.5rem;">Real Results</h1>
+            <p style="color: var(--color-text-muted); max-width: 600px; margin: 0 auto;">
+                These aren't just photos. They are proof of discipline, consistency, and the Iron Forge system.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="gallery-grid">
+                <!-- Result 1 -->
+                <div class="result-card">
+                    <div class="images-container">
+                        <div class="ba-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1548690312-e3b507d8c110?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80');">
+                            <div class="ba-label">Before</div>
+                        </div>
+                        <div class="ba-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80');">
+                            <div class="ba-label">After</div>
+                        </div>
+                    </div>
+                    <h3>Michael R.</h3>
+                    <p style="color: var(--color-text-muted); margin-bottom: 15px; font-size: 0.9rem;">"I was stuck at a
+                        plateau for 3 years. Iron Forge changed everything in 12 weeks."</p>
+                    <div class="stat-grid">
+                        <div class="stat-box">
+                            <div class="stat-value">-22 lbs</div>
+                            <div class="stat-label">Fat Loss</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value">+15%</div>
+                            <div class="stat-label">Strength</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Result 2 -->
+                <div class="result-card">
+                    <div class="images-container">
+                        <div class="ba-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1574680096141-1cddd32e0340?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80');">
+                            <div class="ba-label">Before</div>
+                        </div>
+                        <div class="ba-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80');">
+                            <div class="ba-label">After</div>
+                        </div>
+                    </div>
+                    <h3>Jessica K.</h3>
+                    <p style="color: var(--color-text-muted); margin-bottom: 15px; font-size: 0.9rem;">"Post-pregnancy I
+                        thought I'd never get my abs back. The nutrition plan was a lifesaver."</p>
+                    <div class="stat-grid">
+                        <div class="stat-box">
+                            <div class="stat-value">-18 lbs</div>
+                            <div class="stat-label">Weight</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value">6 inches</div>
+                            <div class="stat-label">Waist Down</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Result 3 -->
+                <div class="result-card">
+                    <div class="images-container">
+                        <div class="ba-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1567013127542-490d757e51fc?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80');">
+                            <div class="ba-label">Before</div>
+                        </div>
+                        <div class="ba-image"
+                            style="background-image: url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80');">
+                            <div class="ba-label">After</div>
+                        </div>
+                    </div>
+                    <h3>David T.</h3>
+                    <p style="color: var(--color-text-muted); margin-bottom: 15px; font-size: 0.9rem;">"Wanted to prep
+                        for my first bodybuilding show. The coaching was precise."</p>
+                    <div class="stat-grid">
+                        <div class="stat-box">
+                            <div class="stat-value">5%</div>
+                            <div class="stat-label">Body Fat</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value">1st</div>
+                            <div class="stat-label">Place</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="contact.html" class="btn btn-primary">Start Your Transformation</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container" style="text-align: center; color: var(--color-text-muted);">
+            &copy; 2026 Iron Forge Training.
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
