@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const backToTopBtn = document.getElementById('back-to-top');
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
+        if (window.scrollY > 50) {
             backToTopBtn?.classList.add('d-block');
             backToTopBtn?.classList.remove('d-none');
         } else {
