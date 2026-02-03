@@ -281,4 +281,12 @@ footer {
     .section-title h2 {
         font-size: 2.2rem;
     }
+
+    section {
+        padding: 40px 0;
+    }
+
+    .section-title {
+        margin-bottom: 30px;
+    }
 }

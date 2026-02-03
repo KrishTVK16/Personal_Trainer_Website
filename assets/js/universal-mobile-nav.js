@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Fallback: Default hardcoded links if absolutely nothing is found (Safety net)
             linksHTML = `
                 <li><a href="index.html">Home</a></li>
-                <li><a href="home-2.html">Programs</a></li>
+
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
