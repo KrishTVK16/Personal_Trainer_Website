@@ -14,41 +14,73 @@
 
 <body>
     <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
+        <div class="container flex-nowrap">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
                 <img src="assets/images/logo.png" alt="IRONFORGE" height="40">
+                <h4 class="fw-bold mb-0 text-body">IRON<span class="text-primary">FORGE</span></h4>
             </a>
-            <div class="d-flex align-items-center gap-3 order-lg-3">
-                <button class="btn btn-sm btn-outline-secondary rounded-circle" id="theme-toggle"><i
-                        class="fas fa-moon"></i></button>
+
+            <!-- Desktop Menu -->
+            <ul class="desktop-menu d-none d-lg-flex list-unstyled gap-4 mx-auto mb-0">
+                <li class="nav-item"><a class="nav-link text-uppercase fw-bold text-body" href="index.html">Home</a>
+                </li>
+                <li class="nav-item"><a class="nav-link text-uppercase fw-bold text-body" href="home-2.html">Home 2</a>
+                </li>
+                <li class="nav-item"><a class="nav-link text-uppercase fw-bold text-body"
+                        href="programs.html">Programs</a></li>
+                <li class="nav-item"><a class="nav-link text-uppercase fw-bold text-body" href="about.html">About</a>
+                </li>
+                <li class="nav-item"><a class="nav-link text-uppercase fw-bold text-body"
+                        href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link text-uppercase fw-bold text-body"
+                        href="pricing.html">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link active text-uppercase fw-bold text-body"
+                        href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link text-uppercase fw-bold text-body"
+                        href="contact.html">Contact</a></li>
+            </ul>
+            <div class="d-flex align-items-center gap-2 order-lg-3">
+                <!-- Theme Toggle -->
+                <button class="btn btn-sm btn-outline-secondary rounded-circle me-2" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <!-- Auth Buttons (Desktop) -->
                 <div class="d-none d-lg-flex gap-2">
                     <a href="dashboard.html" class="btn btn-outline-primary btn-sm">Dashboard</a>
-                    <a href="login.html" class="btn btn-primary btn-sm">Login</a>
                     <a href="register.html" class="btn btn-primary btn-sm">Sign Up</a>
+                    <a href="login.html" class="btn btn-primary btn-sm">Login</a>
                 </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar"><span class="navbar-toggler-icon"></span></button>
+
+                <!-- Mobile Toggle: Visible ONLY on mobile/tablet -->
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title">IRON<span>FORGE</span></h5><button type="button" class="btn-close"
-                        data-bs-dismiss="offcanvas"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="home-2.html">Programs</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    </ul>
-                    <div class="d-lg-none mt-3 d-flex gap-2 flex-wrap">
-                        <a href="dashboard.html" class="btn btn-outline-primary w-100">Dashboard</a>
-                        <a href="login.html" class="btn btn-primary w-50">Login</a>
-                        <a href="register.html" class="btn btn-primary w-50">Sign Up</a>
-                    </div>
+
+        </div>
+        <!-- Offcanvas Menu -->
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar">
+            <div class="offcanvas-header justify-content-end">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav flex-grow-1 justify-content-center mb-4 d-lg-none">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <!-- Mobile Auth Buttons: Visible ONLY on mobile/tablet -->
+                <div class="d-flex flex-column gap-2 w-100 align-items-center d-lg-none">
+                    <a href="dashboard.html" class="btn btn-outline-primary">Dashboard</a>
+                    <a href="login.html" class="btn btn-primary">Login</a>
+                    <a href="register.html" class="btn btn-primary">Sign Up</a>
                 </div>
             </div>
         </div>
@@ -66,7 +98,7 @@
                 <div class="col-md-4">
                     <div class="card h-100 hover-card border-0 bg-body-tertiary">
                         <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                            class="card-img-top" alt="Blog Post">
+                            class="card-img-top" alt="Blog Post" style="height: 250px; object-fit: cover;">
                         <div class="card-body">
                             <span class="badg bg-primary-custom text-white small px-2 py-1 rounded">Training</span>
                             <h3 class="h5 card-title mt-3"><a href="blog-details.html"
@@ -84,7 +116,7 @@
                 <div class="col-md-4">
                     <div class="card h-100 hover-card border-0 bg-body-tertiary">
                         <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                            class="card-img-top" alt="Blog Post">
+                            class="card-img-top" alt="Blog Post" style="height: 250px; object-fit: cover;">
                         <div class="card-body">
                             <span class="badg bg-success text-white small px-2 py-1 rounded">Nutrition</span>
                             <h3 class="h5 card-title mt-3"><a href="blog-details.html"
@@ -101,8 +133,8 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card h-100 hover-card border-0 bg-body-tertiary">
-                        <img src="https://images.unsplash.com/photo-1552674605-469555f074d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                            class="card-img-top" alt="Blog Post">
+                        <img src="assets/images/Discipline_Motivation.jfif" class="card-img-top" alt="Blog Post"
+                            style="height: 250px; object-fit: cover;">
                         <div class="card-body">
                             <span class="badg bg-info text-white small px-2 py-1 rounded">Mindset</span>
                             <h3 class="h5 card-title mt-3"><a href="blog-details.html"
@@ -131,11 +163,71 @@
         </div>
     </section>
 
+    <!-- [NEW] Newsletter Feature -->
+    <section class="section-padding bg-primary text-white text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold mb-3">Join The Inner Circle</h2>
+                    <p class="lead mb-4">Get weekly workout drops, nutrition hacks, and exclusive discounts delivered to
+                        your inbox. No spam, just gains.</p>
+                    <form class="d-flex gap-2 justify-content-center flex-wrap">
+                        <input type="email" class="form-control w-auto" placeholder="Enter your email"
+                            style="min-width: 300px;">
+                        <button class="btn btn-dark" type="submit">Subscribe Free</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- [NEW] Trending Topics -->
+    <section class="section-padding">
+        <div class="container">
+            <h3 class="fw-bold mb-4">Trending Topics</h3>
+            <div class="d-flex flex-wrap gap-2">
+                <a href="#" class="btn btn-outline-secondary rounded-pill">Hypertrophy</a>
+                <a href="#" class="btn btn-outline-secondary rounded-pill">Fat Loss</a>
+                <a href="#" class="btn btn-outline-secondary rounded-pill">Mobility</a>
+                <a href="#" class="btn btn-outline-secondary rounded-pill">Nutrition</a>
+                <a href="#" class="btn btn-outline-secondary rounded-pill">Supplements</a>
+                <a href="#" class="btn btn-outline-secondary rounded-pill">Mindset</a>
+                <a href="#" class="btn btn-outline-secondary rounded-pill">Recovery</a>
+                <a href="#" class="btn btn-outline-secondary rounded-pill">Powerlifting</a>
+                <a href="#" class="btn btn-outline-secondary rounded-pill">HIIT</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- [NEW] Featured Author -->
+    <section class="section-padding bg-body-tertiary">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-8">
+                    <div class="d-flex align-items-center gap-4 flex-column flex-md-row text-center text-md-start">
+                        <img src="https://images.unsplash.com/photo-1549476464-37392f717541?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80"
+                            class="rounded-circle shadow" alt="Editor" width="120" height="120"
+                            style="object-fit: cover;">
+                        <div>
+                            <h5 class="text-primary fw-bold text-uppercase mb-1">Editor in Chief</h5>
+                            <h3 class="fw-bold mb-2">Marcus 'Iron' Vance</h3>
+                            <p class="text-secondary mb-0">"I write what I practice. Every article on this site is
+                                vetted by science and tested in the trenchs. If it's here, it works."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="bg-body-tertiary">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-4 col-md-6">
-                    <h4 class="mb-3">IRON<span>FORGE</span></h4>
+                    <a href="index.html" class="text-decoration-none d-flex align-items-center gap-2 mb-3">
+                        <img src="assets/images/logo.png" alt="IRONFORGE" height="40">
+                        <h4 class="fw-bold mb-0 text-body">IRON<span class="text-primary">FORGE</span></h4>
+                    </a>
                     <p class="text-secondary small mb-4">Elite Personal Training Systems designed for those who refuse
                         to settle for average.</p>
                     <div class="d-flex gap-3">

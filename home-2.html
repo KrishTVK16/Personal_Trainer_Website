@@ -15,127 +15,369 @@
 <body>
 
     <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
+        <div class="container flex-nowrap">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
                 <img src="assets/images/logo.png" alt="IRONFORGE" height="40">
+                <h4 class="fw-bold mb-0 text-body">IRON<span class="text-primary">FORGE</span></h4>
             </a>
-            <div class="d-flex align-items-center gap-3 order-lg-3">
-                <button class="btn btn-sm btn-outline-secondary rounded-circle" id="theme-toggle"><i
-                        class="fas fa-moon"></i></button>
+
+
+
+            <!-- Desktop Menu -->
+            <ul class="desktop-menu d-none d-lg-flex list-unstyled gap-4 mx-auto mb-0">
+                <li class="nav-item"><a class="nav-link text-uppercase fw-bold text-body" href="index.html">Home</a>
+                </li>
+                <li class="nav-item"><a class="nav-link active text-uppercase fw-bold text-body" href="home-2.html">Home
+                        2</a>
+                </li>
+                <li class="nav-item"><a class="nav-link text-uppercase fw-bold text-body"
+                        href="programs.html">Programs</a></li>
+                <li class="nav-item"><a class="nav-link text-uppercase fw-bold text-body" href="about.html">About</a>
+                </li>
+                <li class="nav-item"><a class="nav-link text-uppercase fw-bold text-body"
+                        href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link text-uppercase fw-bold text-body"
+                        href="pricing.html">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link text-uppercase fw-bold text-body" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link text-uppercase fw-bold text-body"
+                        href="contact.html">Contact</a></li>
+            </ul>
+            <div class="d-flex align-items-center gap-2 order-lg-3">
+                <!-- Theme Toggle -->
+                <button class="btn btn-sm btn-outline-secondary rounded-circle me-2" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <!-- Auth Buttons (Desktop) -->
                 <div class="d-none d-lg-flex gap-2">
                     <a href="dashboard.html" class="btn btn-outline-primary btn-sm">Dashboard</a>
-                    <a href="login.html" class="btn btn-primary btn-sm">Login</a>
                     <a href="register.html" class="btn btn-primary btn-sm">Sign Up</a>
+                    <a href="login.html" class="btn btn-primary btn-sm">Login</a>
                 </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar"><span class="navbar-toggler-icon"></span></button>
+
+                <!-- Mobile Toggle: Visible ONLY on mobile/tablet -->
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title">IRON<span>FORGE</span></h5><button type="button" class="btn-close"
-                        data-bs-dismiss="offcanvas"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="home-2.html">Programs</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    </ul>
-                    <div class="d-lg-none mt-3 d-flex gap-2 flex-wrap">
-                        <a href="dashboard.html" class="btn btn-outline-primary w-100">Dashboard</a>
-                        <a href="login.html" class="btn btn-primary w-50">Login</a>
-                        <a href="register.html" class="btn btn-primary w-50">Sign Up</a>
-                    </div>
+
+        </div>
+        <!-- Offcanvas Menu -->
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar">
+            <div class="offcanvas-header justify-content-end">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav flex-grow-1 justify-content-center mb-4 d-lg-none">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="home-2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <!-- Mobile Auth Buttons: Visible ONLY on mobile/tablet -->
+                <div class="d-flex flex-column gap-2 w-100 align-items-center d-lg-none">
+                    <a href="dashboard.html" class="btn btn-outline-primary">Dashboard</a>
+                    <a href="login.html" class="btn btn-primary">Login</a>
+                    <a href="register.html" class="btn btn-primary">Sign Up</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <section class="section-padding bg-body-secondary text-center">
-        <div class="container">
-            <h1 class="display-4 fw-bold">Select Your Protocol</h1>
-            <p class="lead text-secondary">Structured training systems designed for specific outcomes.</p>
+    <!-- Hero Section -->
+    <section class="d-flex align-items-center position-relative overflow-hidden bg-dark text-white"
+        style="min-height: 90vh;">
+        <div class="container-fluid h-100 p-0">
+            <div class="row w-100 m-0 h-100">
+                <div class="col-lg-6 d-flex align-items-center p-0">
+                    <div class="p-5 p-lg-5 mx-auto text-center" style="max-width: 650px;">
+                        <span class="text-primary fw-bold letter-spacing-2 text-uppercase mb-3 d-block">Est. 2026</span>
+                        <h1 class="display-3 fw-bold text-uppercase mb-4">Forged in <span
+                                class="text-primary">Fire.</span><br>Built for <span class="text-primary">Life.</span>
+                        </h1>
+                        <p class="lead mb-5 text-white-50">The only easy day was yesterday. Stop training for looks.
+                            Start training for capability, longevity, and raw power. This is not just a gym. It's a
+                            crucible.</p>
+                        <div class="d-flex gap-3 flex-column flex-sm-row justify-content-center">
+                            <a href="programs.html" class="btn btn-primary btn-lg">Start Training</a>
+                            <a href="#philosophy" class="btn btn-outline-light btn-lg">Our Philosophy</a>
+                        </div>
+                        <div class="mt-5 pt-4 border-top border-secondary border-opacity-25">
+                            <p class="small text-white-50 mb-2">Trusted by elite performers in:</p>
+                            <div class="d-flex gap-4 opacity-50 justify-content-center">
+                                <i class="fas fa-shield-alt fa-2x"></i>
+                                <i class="fas fa-running fa-2x"></i>
+                                <i class="fas fa-mountain fa-2x"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 p-0 d-none d-lg-block position-relative">
+                    <img src="assets/images/hero_gym_dark_1770090937794.png" alt="Training" class="w-100 h-100"
+                        style="object-fit: cover; position: absolute; height: 100%;">
+                    <div class="position-absolute top-0 start-0 w-100 h-100"
+                        style="background: linear-gradient(to right, rgba(0,0,0,0.8), transparent);"></div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="section-padding">
+    <!-- Stats Bar -->
+    <section class="py-5 border-bottom border-secondary border-opacity-10 bg-body-tertiary">
         <div class="container">
-            <div class="row g-4">
-                <!-- Program 1 -->
-                <div class="col-md-4">
-                    <div class="card h-100 hover-card border-0 bg-body-tertiary">
-                        <div style="height: 200px; overflow: hidden;">
-                            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                                class="card-img-top" alt="Program" style="object-fit:cover; height: 100%;">
+            <div class="row text-center g-4">
+                <div class="col-md-3 col-6">
+                    <div class="d-flex justify-content-center align-items-center gap-3">
+                        <i class="fas fa-users text-primary fa-2x"></i>
+                        <div class="text-start">
+                            <h3 class="h4 fw-bold mb-0">500+</h3>
+                            <p class="text-uppercase small text-secondary mb-0">Lives Changed</p>
                         </div>
-                        <div class="card-body">
-                            <span class="badge bg-primary-custom mb-2">Strength</span>
-                            <h3 class="h5 card-title">Hypertrophy 101</h3>
-                            <p class="card-text text-secondary small">The foundational program for building raw muscle
-                                mass. 12-week cycle.</p>
-                            <hr class="opacity-25">
-                            <div class="d-flex justify-content-between small text-secondary">
-                                <span><i class="far fa-clock"></i> 12 Weeks</span>
-                                <span><i class="fas fa-signal"></i> Medium</span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="d-flex justify-content-center align-items-center gap-3">
+                        <i class="fas fa-weight-hanging text-primary fa-2x"></i>
+                        <div class="text-start">
+                            <h3 class="h4 fw-bold mb-0">12k+</h3>
+                            <p class="text-uppercase small text-secondary mb-0">Lbs Lost</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="d-flex justify-content-center align-items-center gap-3">
+                        <i class="fas fa-user-check text-primary fa-2x"></i>
+                        <div class="text-start">
+                            <h3 class="h4 fw-bold mb-0">200+</h3>
+                            <p class="text-uppercase small text-secondary mb-0">Active Members</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="d-flex justify-content-center align-items-center gap-3">
+                        <i class="fas fa-infinity text-primary fa-2x"></i>
+                        <div class="text-start">
+                            <h3 class="h4 fw-bold mb-0">100%</h3>
+                            <p class="text-uppercase small text-secondary mb-0">Commitment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="section-padding bg-black text-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold text-uppercase">The Iron Philosophy</h2>
+                <div class="bg-primary mx-auto mt-3" style="width: 60px; height: 4px;"></div>
+                <p class="lead text-white-50 mt-3 mx-auto" style="max-width: 600px;">We don't subscribe to fads. We
+                    adhere to principles.</p>
+            </div>
+            <div class="row g-5 text-center">
+                <div class="col-md-4">
+                    <div
+                        class="p-5 border border-secondary border-opacity-25 rounded-0 h-100 hover-card bg-dark transition-all">
+                        <i class="fas fa-dumbbell fa-3x text-primary mb-4"></i>
+                        <h3 class="h4 text-uppercase fw-bold">Discipline</h3>
+                        <p class="text-secondary mt-3">Motivation is fickle. Discipline is consistent. We build habits
+                            that survive when motivation dies. You show up, you do the work.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div
+                        class="p-5 border border-secondary border-opacity-25 rounded-0 h-100 hover-card bg-dark transition-all">
+                        <i class="fas fa-flask fa-3x text-primary mb-4"></i>
+                        <h3 class="h4 text-uppercase fw-bold">Science</h3>
+                        <p class="text-secondary mt-3">No bro-science. Our protocols are based on biomechanics and
+                            physiological adaptation derived from peer-reviewed research.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div
+                        class="p-5 border border-secondary border-opacity-25 rounded-0 h-100 hover-card bg-dark transition-all">
+                        <i class="fas fa-users fa-3x text-primary mb-4"></i>
+                        <h3 class="h4 text-uppercase fw-bold">Shared Suffering</h3>
+                        <p class="text-secondary mt-3">You don't fight alone. Our community pushes you when you want to
+                            quit. We rise by lifting others and holding each other accountable.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Program Spotlight -->
+    <section class="section-padding bg-body-tertiary">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                            class="img-fluid rounded shadow-lg" alt="Hybrid Coaching"
+                            style="filter: grayscale(20%) contrast(110%); min-height: 500px; object-fit: cover;">
+                        <div
+                            class="position-absolute bottom-0 start-0 bg-primary text-white px-4 py-2 fw-bold text-uppercase ms-4 mb-4">
+                            Flagship Program
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <span class="text-primary fw-bold text-uppercase letter-spacing-2 mb-2 d-block">Most Popular</span>
+                    <h2 class="display-4 fw-bold mb-4">Hybrid Coaching Protocol</h2>
+                    <p class="lead text-secondary mb-4">The perfect blend of autonomy and guidance. Get professional
+                        programming with monthly check-ins to ensure you're crushing your goals.</p>
+
+                    <div class="d-flex flex-column gap-3 mb-5">
+                        <div class="d-flex align-items-center justify-content-center gap-3">
+                            <i class="fas fa-check-circle text-primary mt-1"></i>
+                            <div>
+                                <h5 class="fw-bold mb-1">Custom 12-Week Periodization</h5>
+                                <p class="small text-secondary m-0">Tailored exactly to your strength levels and
+                                    equipment access.</p>
                             </div>
                         </div>
-                        <div class="card-footer bg-transparent border-0 pb-4">
-                            <a href="service-details.html" class="btn btn-outline-primary w-100">View Details</a>
+                        <div class="d-flex align-items-center justify-content-center gap-3">
+                            <i class="fas fa-check-circle text-primary mt-1"></i>
+                            <div>
+                                <h5 class="fw-bold mb-1">Video Form Analysis</h5>
+                                <p class="small text-secondary m-0">Upload your lifts, get expert feedback. Fix your
+                                    mechanics.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center gap-3">
+                            <i class="fas fa-check-circle text-primary mt-1"></i>
+                            <div>
+                                <h5 class="fw-bold mb-1">Macronutrient Targets</h5>
+                                <p class="small text-secondary m-0">Fuel your body correctly. We set the numbers, you
+                                    hit them.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="d-flex align-items-center justify-content-center gap-4 border-top border-secondary border-opacity-25 pt-4">
+                        <div>
+                            <span class="fs-2 fw-bold text-body">$149</span>
+                            <span class="text-secondary">/month</span>
+                        </div>
+                        <a href="programs.html" class="btn btn-primary px-5 py-3">View Full Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wall of Honor Section -->
+    <section class="section-padding bg-black text-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="text-primary fw-bold text-uppercase letter-spacing-2 mb-2 d-block">Hall of Fame</span>
+                <h2 class="display-4 fw-bold text-uppercase">Wall of Honor</h2>
+                <div class="bg-primary mx-auto mt-3" style="width: 60px; height: 4px;"></div>
+                <p class="lead text-white-50 mt-3 mx-auto" style="max-width: 600px;">Real people. Real metrics. No
+                    excuses.</p>
+            </div>
+
+            <div class="row g-5 justify-content-center">
+                <!-- Testimonial 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="h-100 ps-4 border-start border-3 border-primary d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="fs-5 fst-italic text-light mb-4">"The output didn't lie. I came in thinking I was
+                                fit. Iron Forge humbled me, then rebuilt me. Added 40lbs to my bench in 12 weeks."</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-dark border border-secondary border-opacity-25 rounded-circle d-flex align-items-center justify-content-center text-secondary fw-bold"
+                                style="width: 45px; height: 45px;">MJ</div>
+                            <div>
+                                <h6 class="fw-bold mb-0 text-white">Mike Johnson</h6>
+                                <span class="small text-primary text-uppercase letter-spacing-1">Hybrid Protocol</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Program 2 -->
-                <div class="col-md-4">
-                    <div class="card h-100 hover-card border-0 bg-body-tertiary">
-                        <div style="height: 200px; overflow: hidden;">
-                            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                                class="card-img-top" alt="Program" style="object-fit:cover; height: 100%;">
-                        </div>
-                        <div class="card-body">
-                            <span class="badge bg-danger mb-2">Fat Loss</span>
-                            <h3 class="h5 card-title">Metabolic Shred</h3>
-                            <p class="card-text text-secondary small">High-intensity interval training combined with
-                                caloric deficit planning.</p>
-                            <hr class="opacity-25">
-                            <div class="d-flex justify-content-between small text-secondary">
-                                <span><i class="far fa-clock"></i> 8 Weeks</span>
-                                <span><i class="fas fa-signal"></i> Intense</span>
+                <!-- Testimonial 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="h-100 ps-4 border-start border-3 border-primary d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
+                            <p class="fs-5 fst-italic text-light mb-4">"No fluff. Just hard work and science. The
+                                community pushes you past your perceived limits. Best decision I've made for my health."
+                            </p>
                         </div>
-                        <div class="card-footer bg-transparent border-0 pb-4">
-                            <a href="service-details.html" class="btn btn-outline-primary w-100">View Details</a>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-dark border border-secondary border-opacity-25 rounded-circle d-flex align-items-center justify-content-center text-secondary fw-bold"
+                                style="width: 45px; height: 45px;">SL</div>
+                            <div>
+                                <h6 class="fw-bold mb-0 text-white">Sarah Lewis</h6>
+                                <span class="small text-primary text-uppercase letter-spacing-1">Strength Camp</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Program 3 -->
-                <div class="col-md-4">
-                    <div class="card h-100 hover-card border-0 bg-body-tertiary">
-                        <div style="height: 200px; overflow: hidden;">
-                            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                                class="card-img-top" alt="Program" style="object-fit:cover; height: 100%;">
-                        </div>
-                        <div class="card-body">
-                            <span class="badge bg-warning text-dark mb-2">Athletic</span>
-                            <h3 class="h5 card-title">Athlete Prime</h3>
-                            <p class="card-text text-secondary small">Explosive power and agility training for
-                                competitive athletes.</p>
-                            <hr class="opacity-25">
-                            <div class="d-flex justify-content-between small text-secondary">
-                                <span><i class="far fa-clock"></i> 16 Weeks</span>
-                                <span><i class="fas fa-signal"></i> Advanced</span>
+                <!-- Testimonial 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="h-100 ps-4 border-start border-3 border-primary d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
+                            <p class="fs-5 fst-italic text-light mb-4">"I needed accountability. I found a family. The
+                                6AM crew is the reason I get out of bed. 30lbs down and never felt stronger."</p>
                         </div>
-                        <div class="card-footer bg-transparent border-0 pb-4">
-                            <a href="service-details.html" class="btn btn-outline-primary w-100">View Details</a>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-dark border border-secondary border-opacity-25 rounded-circle d-flex align-items-center justify-content-center text-secondary fw-bold"
+                                style="width: 45px; height: 45px;">DT</div>
+                            <div>
+                                <h6 class="fw-bold mb-0 text-white">David Torres</h6>
+                                <span class="small text-primary text-uppercase letter-spacing-1">Metabolic Shred</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community CTA -->
+    <section class="position-relative py-5 text-center text-white"
+        style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('assets/images/transformation_sarah.png') center/cover fixed;">
+        <div class="container position-relative z-1 py-5">
+            <span class="text-primary fw-bold text-uppercase letter-spacing-2 mb-2 d-block">Join The Legion</span>
+            <h2 class="display-3 fw-bold mb-4">Forging Elite Fitness</h2>
+            <p class="lead mb-5 mx-auto text-white-50" style="max-width: 700px;">You don't have to do this alone. Join a
+                community of relentless individuals who refuse to be average. Your new team is waiting.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="register.html" class="btn btn-primary btn-lg px-5">Get Started Today</a>
+                <a href="contact.html" class="btn btn-outline-light btn-lg px-5">Contact Us</a>
             </div>
         </div>
     </section>
@@ -145,7 +387,10 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-4 col-md-6">
-                    <h4 class="mb-3">IRON<span>FORGE</span></h4>
+                    <a href="index.html" class="text-decoration-none d-flex align-items-center gap-2 mb-3">
+                        <img src="assets/images/logo.png" alt="IRONFORGE" height="40">
+                        <h4 class="fw-bold mb-0 text-body">IRON<span class="text-primary">FORGE</span></h4>
+                    </a>
                     <p class="text-secondary small mb-4">Elite Personal Training Systems designed for those who refuse
                         to settle for average.</p>
                     <div class="d-flex gap-3">
