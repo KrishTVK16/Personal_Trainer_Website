@@ -10,7 +10,7 @@
 }
 
 /* Simple Mobile Navigation - Popup Style */
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
 
     /* Hide Bootstrap offcanvas completely */
     .offcanvas {
@@ -142,6 +142,6 @@
 }
 
 /* Ensure navbar toggler iconography rotates */
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
     /* We can't easily animate the icon without state, but we can try active class if we added it to toggler */
 }

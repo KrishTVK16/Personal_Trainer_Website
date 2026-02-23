@@ -60,7 +60,6 @@ h6,
 
 
 /* Desktop Menu Styling */
-/* Desktop Menu Styling */
 .desktop-menu .nav-link {
     position: relative;
     transition: color 0.3s ease;
@@ -71,19 +70,19 @@ h6,
 }
 
 .desktop-menu .nav-link.active {
-    color: var(--color-primary) !important;
+    color: var(--color-secondary) !important;
 }
 
 .desktop-menu .nav-link::after {
     content: '';
     position: absolute;
     width: 0;
-    height: 2px;
-    bottom: 5px;
-    /* Moved up slightly to sit under text */
+    height: 2.5px;
+    bottom: -2px;
+    /* Adjusted gap between text and underline */
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--color-primary);
+    background-color: rgba(17, 17, 190, 0.788);
     transition: width 0.3s ease-in-out;
 }
 
@@ -98,6 +97,12 @@ h6,
     padding-top: 1rem;
     padding-bottom: 1rem;
     backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(63, 53, 204, 0.349);
+}
+
+.desktop-menu {
+    margin-left: 3rem !important;
+    /* Increase gap between brand and menu */
 }
 
 .navbar-brand {

@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // 2. Harvest Auth Buttons dynamically
-        const authContainer = document.querySelector('.d-lg-flex.gap-2') || document.querySelector('.auth-buttons-source');
+        const authContainer = document.querySelector('.d-xl-flex.gap-2') || document.querySelector('.auth-buttons-source');
         let authHTML = '';
         if (authContainer) {
             const buttons = authContainer.cloneNode(true);
