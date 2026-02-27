@@ -247,11 +247,22 @@ h6,
 
 /* Footer */
 footer {
-    padding-top: 4rem;
-    padding-bottom: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
     position: relative;
     z-index: 5;
-    background-color: var(--color-bg-darker);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+[data-bs-theme="dark"] footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: var(--color-bg-darker) !important;
+}
+
+[data-bs-theme="light"] footer,
+body:not([data-bs-theme="dark"]) footer {
+    background-color: #f8f9fa !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Mobile */
