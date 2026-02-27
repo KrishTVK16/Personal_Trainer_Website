@@ -14,6 +14,9 @@
     --color-primary: #4a4537;
     --color-secondary: #6e6464;
     --color-dark-bg: #1f1c10;
+    --color-text-main: #e0e0e0;
+    --color-text-muted: #a0a09a;
+    --color-bg-darker: #15130b;
 }
 
 body {
@@ -34,9 +37,137 @@ h6,
     text-transform: uppercase;
 }
 
+[data-bs-theme="dark"] h1,
+[data-bs-theme="dark"] h2,
+[data-bs-theme="dark"] h3,
+[data-bs-theme="dark"] h4,
+[data-bs-theme="dark"] h5,
+[data-bs-theme="dark"] h6 {
+    color: #ffffff !important;
+}
+
+/* Force visibility in dark backgrounds even in light mode */
+.bg-black,
+.bg-dark,
+.bg-primary {
+    color: #ffffff !important;
+}
+
+.bg-black h1,
+.bg-black h2,
+.bg-black h3,
+.bg-black h4,
+.bg-black h5,
+.bg-black h6,
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark h4,
+.bg-dark h5,
+.bg-dark h6,
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary h4,
+.bg-primary h5,
+.bg-primary h6,
+.bg-black .display-1,
+.bg-black .display-2,
+.bg-black .display-3,
+.bg-black .display-4,
+.bg-black .display-5,
+.bg-black .display-6,
+.bg-dark .display-1,
+.bg-dark .display-2,
+.bg-dark .display-3,
+.bg-dark .display-4,
+.bg-dark .display-5,
+.bg-dark .display-6,
+.bg-primary .display-1,
+.bg-primary .display-2,
+.bg-primary .display-3,
+.bg-primary .display-4,
+.bg-primary .display-5,
+.bg-primary .display-6 {
+    color: #ffffff !important;
+}
+
+.bg-black .text-secondary,
+.bg-dark .text-secondary,
+.bg-primary .text-secondary,
+.bg-black .text-muted,
+.bg-dark .text-muted,
+.bg-black p,
+.bg-dark p,
+.bg-primary p,
+.bg-black small,
+.bg-dark small,
+.bg-primary small {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.bg-black i,
+.bg-dark i,
+.bg-primary i {
+    color: #ffffff !important;
+}
+
+.bg-black span:not(.text-primary):not(.navbar-toggler-icon),
+.bg-dark span:not(.text-primary):not(.navbar-toggler-icon) {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Universal Brand Styles for Header, Footer and All Pages */
+.brand-link {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    text-decoration: none !important;
+    color: inherit !important;
+    cursor: pointer !important;
+    z-index: 10;
+    position: relative;
+    padding: 5px 0;
+}
+
+.brand-logo {
+    height: 40px !important;
+    width: auto !important;
+    object-fit: contain;
+    display: block !important;
+    pointer-events: none;
+}
+
+.brand-name {
+    font-family: var(--font-heading) !important;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    color: #212529 !important;
+    /* Standard dark color for light mode */
+    margin: 0 !important;
+    padding: 0 !important;
+    letter-spacing: 1px !important;
+    line-height: 1 !important;
+    text-transform: uppercase !important;
+    pointer-events: none;
+    display: inline-block !important;
+}
+
+[data-bs-theme="dark"] .brand-name {
+    color: var(--color-text-main) !important;
+}
+
+.brand-name span {
+    color: var(--color-primary) !important;
+}
+
 /* Theme Colors Override */
 [data-bs-theme="dark"] body {
     background-color: var(--color-dark-bg);
+}
+
+[data-bs-theme="dark"] .bg-body-tertiary {
+    background-color: var(--color-bg-darker) !important;
 }
 
 .text-primary-custom {
@@ -118,6 +249,9 @@ h6,
 footer {
     padding-top: 4rem;
     padding-bottom: 2rem;
+    position: relative;
+    z-index: 5;
+    background-color: var(--color-bg-darker);
 }
 
 /* Mobile */
