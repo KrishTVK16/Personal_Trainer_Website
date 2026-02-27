@@ -136,14 +136,19 @@ h6,
     object-fit: contain;
     display: block !important;
     pointer-events: none;
+    transition: filter 0.3s ease;
+}
+
+[data-bs-theme="dark"] .brand-logo {
+    filter: brightness(1.8) drop-shadow(0 0 2px rgba(255, 255, 255, 0.2)) !important;
 }
 
 .brand-name {
     font-family: var(--font-heading) !important;
     font-size: 1.5rem !important;
     font-weight: 700 !important;
-    color: #212529 !important;
-    /* Standard dark color for light mode */
+    color: #1a1a1a !important;
+    /* High contrast dark for light mode */
     margin: 0 !important;
     padding: 0 !important;
     letter-spacing: 1px !important;
@@ -151,14 +156,22 @@ h6,
     text-transform: uppercase !important;
     pointer-events: none;
     display: inline-block !important;
+    transition: color 0.3s ease;
 }
 
 [data-bs-theme="dark"] .brand-name {
-    color: var(--color-text-main) !important;
+    color: #ffffff !important;
+    /* Pure white for dark mode */
 }
 
 .brand-name span {
     color: var(--color-primary) !important;
+    transition: color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .brand-name span {
+    color: #ffd700 !important;
+    /* Vibrant gold for "FORGE" in dark mode */
 }
 
 /* Theme Colors Override */
@@ -239,10 +252,6 @@ h6,
 .navbar-brand {
     font-weight: 700;
     font-size: 1.5rem;
-}
-
-.navbar-brand span {
-    color: var(--color-primary);
 }
 
 /* Footer */

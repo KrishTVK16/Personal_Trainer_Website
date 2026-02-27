@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Universal Mobile Nav: Failed to find any navigation links in standard locations.');
             // Fallback: Default hardcoded links if absolutely nothing is found (Safety net)
             linksHTML = `
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Home 1</a></li>
 
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -19,6 +19,7 @@
             background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1549476464-37392f717541?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
             background-position: center;
+            color: white;
         }
 
         .auth-card {
@@ -28,6 +29,7 @@
             max-width: 450px;
             border: 1px solid rgba(255, 255, 255, 0.1);
             text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
         }
 
         .form-control {
@@ -35,7 +37,7 @@
             padding: 15px;
             background-color: rgba(0, 0, 0, 0.3);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--color-white);
+            color: white;
             margin-bottom: 20px;
             font-family: var(--font-body);
         }
@@ -43,11 +45,16 @@
         .auth-links {
             margin-top: 20px;
             font-size: 0.9rem;
-            color: var(--color-text-muted);
+            color: #a0a09a;
         }
 
         .auth-links a {
-            color: var(--color-primary);
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .auth-links a:hover {
             text-decoration: underline;
         }
     </style>
@@ -56,7 +63,13 @@
 <body>
 
     <div class="auth-card">
-        <h2 style="margin-bottom: 30px; font-size: 2.5rem;">Join the Forge</h2>
+        <div class="d-flex align-items-center justify-content-center gap-2 mb-4">
+            <a href="index.html" class="brand-link">
+                <img src="assets/images/logo.png" alt="IRONFORGE" class="brand-logo">
+                <h4 class="brand-name">IRON<span>FORGE</span></h4>
+            </a>
+        </div>
+        <h2 style="margin-bottom: 30px; font-size: 2.2rem; font-family: 'Oswald', sans-serif; text-transform: uppercase;">Join the Forge</h2>
         <form action="dashboard.html">
             <input type="text" class="form-control" placeholder="Full Name" required>
             <input type="email" class="form-control" placeholder="Email Address" required>
